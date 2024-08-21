@@ -3,9 +3,15 @@ import SearchInput from "./SearchInput";
 
 export default function Header() {
   return (
-    <div>
-      <Link to="/">Legend of Zelda</Link>
-      <SearchInput />
+    <div className="flex items-center justify-between px-4 border-b h-14">
+      <div className="flex items-center space-x-2 text-sm font-medium">
+        <Link className="text-lg font-bold" to="/">
+          Legend of Zelda
+        </Link>
+      </div>
+      <div className="max-w-xl ml-4">
+        <SearchInput />
+      </div>
     </div>
   );
 }
