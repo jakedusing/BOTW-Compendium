@@ -25,7 +25,7 @@ const router = createBrowserRouter([
           }
 
           const res = await fetch(
-            `https://botw-compendium.herokuapp.com/api/v3/regions/${term}`
+            `https://botw-compendium.herokuapp.com/api/v3/compendium/category/${term}`
           );
           const data = await res.json();
 
