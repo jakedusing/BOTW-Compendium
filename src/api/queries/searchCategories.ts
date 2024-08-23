@@ -1,13 +1,13 @@
 import type { CategorySummary } from "../types/categorySummary";
 
 interface SearchResponse {
-  data: {
+  data: [
     data: {
-      name: string;
-      description: string;
+      name?: string;
+      description?: string;
       common_locations: string[] | null;
-    };
-  }[];
+    }
+  ];
 }
 
 export async function searchCategories(
@@ -18,11 +18,11 @@ export async function searchCategories(
   );
   const data: SearchResponse = await res.json();
 
-  return data.data.map(({ data: { name, description, common_locations } }) => {
+  return data.data.map((data) => {
     return {
-      name: name,
-      description: description,
-      common_locations: common_locations,
+      name: data?.name ?? "Unknown",
+      description: data?.description ?? "No description available",
+      common_locations: data?.common_locations ?? [],
     };
   });
 }
