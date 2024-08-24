@@ -1,6 +1,15 @@
+import type { CategorySummary } from "../../api/types/categorySummary";
 import { searchCategories } from "../../api/queries/searchCategories";
 
-export async function searchLoader({ request }: { request: Request }) {
+export interface SearchLoaderResult {
+  searchResults: CategorySummary[];
+}
+
+export async function searchLoader({
+  request,
+}: {
+  request: Request;
+}): Promise<SearchLoaderResult> {
   const { searchParams } = new URL(request.url);
   const term = searchParams.get("term");
 

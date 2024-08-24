@@ -1,5 +1,5 @@
 export interface CategorySummary {
   name?: string;
   description?: string;
-  common_locations: string[] | null;
+  common_locations?: string[];
 }
