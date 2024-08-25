@@ -1,8 +1,8 @@
-import { CategorySummary } from "../api/types/categorySummary";
+import { CategoryMonsterSummary } from "../api/types/categoryMonsterSummary";
 import { Link } from "react-router-dom";
 
 interface CategoryListItemProps {
-  category: CategorySummary;
+  category: CategoryMonsterSummary;
 }
 
 export default function CategoryListItem({ category }: CategoryListItemProps) {
@@ -26,11 +26,15 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
           to={`/categories/${category.name}`}
           className="text-xl font-semibold text-blue-600 hover:underline"
         >
-          {category.name}
+          {category.name?.toUpperCase()}
         </Link>
         <p className="text-sm text-gray-600">{category.description}</p>
         <div className="flex flex-wrap gap-2 mt-2">{renderedLocations}</div>
+        <img
+          src={`https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${category.name}/image`}
+        />
       </div>
+
       <div className="mr-6 ">
         <Link
           to={`categories/${category.name}`}
