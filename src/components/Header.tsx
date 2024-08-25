@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SearchInput from "./SearchInput";
+// import SearchInput from "./SearchInput";
 import CategoryShowButton from "./CategoryShowButton";
 
 export default function Header() {

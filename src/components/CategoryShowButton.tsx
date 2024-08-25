@@ -1,15 +1,20 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+// import { useState } from "react";
+import { Link } from "react-router-dom";
+import { CategoryMonsterSummary } from "../api/types/categoryMonsterSummary";
 
-export default function CategoryShowButton({ name }) {
-  const [term, setTerm] = useState("");
+interface CategoryShowProps {
+  name: CategoryMonsterSummary;
+}
+
+export default function CategoryShowButton({ name }: CategoryShowProps) {
+  /* const [term, setTerm] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    navigate(`/search?term=${term}`);
-  };
+    //navigate(`/search?term=${term}`);
+  }; */
 
   return (
     <Link

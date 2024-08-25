@@ -20,18 +20,21 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
   );
 
   return (
-    <div className="border p-4 rounded flex justify-between items-center">
-      <div className="flex flex-col gap-2">
-        <Link to={`/categories/${category.name}`} className="text-xl font-bold">
+    <div className="border p-4 rounded-lg bg-white shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col justify-between">
+      <div className="flex flex-col gap-2 mb-4">
+        <Link
+          to={`/categories/${category.name}`}
+          className="text-xl font-semibold text-blue-600 hover:underline"
+        >
           {category.name}
         </Link>
-        <p className="text-sm text-gray-500">{category.description}</p>
-        <div className="flex gap-1">{renderedLocations}</div>
+        <p className="text-sm text-gray-600">{category.description}</p>
+        <div className="flex flex-wrap gap-2 mt-2">{renderedLocations}</div>
       </div>
       <div className="mr-6 ">
         <Link
           to={`categories/${category.name}`}
-          className="py-2 px-3 rounded bg-black text-white text-lg"
+          className="block py-2 px-4 rounded bg-black text-white text-center text-lg hover:bg-gray-800 transition-colors duration-300 ease-in-out"
         >
           View
         </Link>
