@@ -1,3 +1,4 @@
+import type { CategoryMonsterDetails } from "../../api/types/categoryMonsterDetails";
 import type { Params } from "react-router-dom";
 import { getMonsterCategory } from "../../api/queries/getMonsterCategory";
 
@@ -5,7 +6,13 @@ interface LoaderArgs {
   params: Params;
 }
 
-export async function detailsLoader({ params }: LoaderArgs) {
+export interface DetailsLoaderResult {
+  details: CategoryMonsterDetails;
+}
+
+export async function detailsLoader({
+  params,
+}: LoaderArgs): Promise<DetailsLoaderResult> {
   const { name } = params;
 
   if (!name) {
@@ -17,5 +24,4 @@ export async function detailsLoader({ params }: LoaderArgs) {
   return {
     details,
   };
-  return "data!!";
 }

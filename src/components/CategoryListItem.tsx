@@ -39,7 +39,7 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
 
       <div className="mr-6 ">
         <Link
-          to={`categories/${category.name}`}
+          to={`/categories/${category.name}`}
           className="block py-2 px-4 rounded bg-yellow-600 text-white text-center text-lg hover:bg-yellow-500 transition-colors duration-300 ease-in-out"
         >
           View
