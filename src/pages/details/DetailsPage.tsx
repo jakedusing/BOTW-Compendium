@@ -8,7 +8,7 @@ export default function DetailsPage() {
       return (
         <div
           key={common_locations}
-          className="border py-0.5 px-1 text-xs bg-yellow-400 rounded hover:bg-yellow-300 transition-colors duration-300 ease-in-out"
+          className="border py-0.5 px-1 text-xs bg-yellow-400 rounded hover:bg-yellow-300 hover:cursor-pointer transition-colors duration-300 ease-in-out"
         >
           {common_locations}
         </div>
@@ -20,7 +20,7 @@ export default function DetailsPage() {
     return (
       <div
         key={drops}
-        className="border py-0.5 px-1 text-xs bg-yellow-400 rounded hover:bg-yellow-300 transition-colors duration-300 ease-in-out"
+        className="border py-0.5 px-1 text-xs bg-yellow-400 rounded hover:bg-yellow-300 hover:cursor-pointer transition-colors duration-300 ease-in-out"
       >
         {drops}
       </div>

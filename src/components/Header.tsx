@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // import SearchInput from "./SearchInput";
 import CategoryShowButton from "./CategoryShowButton";
+import MaterialShowButton from "./MaterialShowButton";
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
       </div>
       <div className="max-w-xl ml-4">
         <CategoryShowButton name={"monsters"} />
+        <MaterialShowButton name={"materials"} />
       </div>
     </div>
   );
