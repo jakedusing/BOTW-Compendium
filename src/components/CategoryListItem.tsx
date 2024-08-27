@@ -37,10 +37,10 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
         />
       </div>
 
-      <div className="mr-6 ">
+      <div className="flex justify-center">
         <Link
           to={`/categories/${category.name}`}
-          className="block py-2 px-4 rounded bg-yellow-600 text-white text-center text-lg hover:bg-yellow-500 transition-colors duration-300 ease-in-out"
+          className="block py-2 px-6 rounded bg-yellow-600 text-white text-center text-lg hover:bg-yellow-500 transition-colors duration-300 ease-in-out"
         >
           View
         </Link>
