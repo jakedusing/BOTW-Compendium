@@ -1,9 +1,9 @@
 // import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CategoryMonsterSummary } from "../api/types/categoryMonsterSummary";
+//import { CategoryMonsterSummary } from "../api/types/categoryMonsterSummary";
 
 interface CategoryShowProps {
-  name: CategoryMonsterSummary;
+  name: string;
 }
 
 export default function CategoryShowButton({ name }: CategoryShowProps) {

@@ -19,7 +19,6 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
     }
   );
 
-  console.log(category);
   let pathName = "";
   if (category.category === "monsters") {
     pathName = `/categories/${category.name}`;
