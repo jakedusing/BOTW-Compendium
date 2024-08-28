@@ -1,8 +1,8 @@
-import type { CategoryMonsterSummary } from "../../api/types/categoryMonsterSummary";
+import type { CategorySummary } from "../../api/types/categorySummary";
 import { searchCategories } from "../../api/queries/searchCategories";
 
 export interface SearchLoaderResult {
-  searchResults: CategoryMonsterSummary[];
+  searchResults: CategorySummary[];
 }
 
 export async function searchLoader({

@@ -1,6 +1,6 @@
-import type { CategoryMaterialDetails } from "../types/categoryMaterialDetails";
+import type { CategoryMaterialDetails } from "../../types/materials/categoryMaterialDetails";
 
-export async function getMonsterCategory(
+export async function getMaterialCategory(
   name: string
 ): Promise<CategoryMaterialDetails> {
   const res = await fetch(

@@ -4,6 +4,7 @@ interface SearchResponse {
   data: [
     data: {
       name?: string;
+      category?: string;
       description?: string;
       common_locations?: string[];
     }
@@ -21,6 +22,7 @@ export async function searchCategories(
   return data.data.map((data) => {
     return {
       name: data?.name ?? "Unknown",
+      category: data?.category ?? "na",
       description: data?.description ?? "No description available",
       common_locations: data?.common_locations ?? [],
     };

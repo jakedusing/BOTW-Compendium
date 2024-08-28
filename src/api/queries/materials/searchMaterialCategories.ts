@@ -1,4 +1,4 @@
-import type { CategoryMaterialSummary } from "../types/categoryMaterialSummary";
+import { CategoryMaterialSummary } from "../../types/materials/categoryMaterialSummary";
 
 interface SearchResponse {
   data: [

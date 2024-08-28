@@ -1,8 +1,8 @@
-import { CategoryMonsterSummary } from "../api/types/categoryMonsterSummary";
+import { CategorySummary } from "../api/types/categorySummary";
 import { Link } from "react-router-dom";
 
 interface CategoryListItemProps {
-  category: CategoryMonsterSummary;
+  category: CategorySummary;
 }
 
 export default function CategoryListItem({ category }: CategoryListItemProps) {
@@ -19,11 +19,19 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
     }
   );
 
+  console.log(category);
+  let pathName = "";
+  if (category.category === "monsters") {
+    pathName = `/categories/${category.name}`;
+  } else {
+    pathName = `/materials/${category.name}`;
+  }
+
   return (
     <div className="border p-4 rounded-lg bg-green-100 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col justify-between">
       <div className="flex flex-col gap-2 mb-4">
         <Link
-          to={`/categories/${category.name}`}
+          to={pathName}
           className="text-xl font-semibold text-green-800 hover:underline"
         >
           {category.name?.toUpperCase()}
@@ -39,7 +47,7 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
 
       <div className="flex justify-center">
         <Link
-          to={`/categories/${category.name}`}
+          to={pathName}
           className="block py-2 px-6 rounded bg-yellow-600 text-white text-center text-lg hover:bg-yellow-500 transition-colors duration-300 ease-in-out"
         >
           View

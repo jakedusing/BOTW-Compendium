@@ -19,7 +19,7 @@ export default function CategoryShowButton({ name }: CategoryShowProps) {
   return (
     <Link
       to={`/search?term=${name}`}
-      className="py-2 px-3 rounded bg-black text-white text-lg"
+      className="py-2 px-3 rounded bg-black text-white text-lg mr-4"
     >
       View Monsters
     </Link>

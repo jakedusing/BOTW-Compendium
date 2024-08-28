@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { CategoryMaterialSummary } from "../api/types/categoryMaterialSummary";
+//import { CategoryMaterialSummary } from "../api/types/materials/categoryMaterialSummary";
+import { CategorySummary } from "../api/types/categorySummary";
 
 interface CategoryShowProps {
-  name: CategoryMaterialSummary;
+  name: CategorySummary;
 }
 
 export default function MaterialShowButton({ name }: CategoryShowProps) {
