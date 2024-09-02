@@ -16,6 +16,11 @@ export default function MaterialsDetailsPage() {
     }
   );
 
+  function capitalizeFirstLetter(str: string) {
+    if (!str) return str;
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-6 bg-gray-900 rounded-lg shadow-lg">
       <h1 className="text-4xl font-bold text-blue-300 border-b-4 border-blue-500 pb-2 mb-4">
@@ -31,13 +36,6 @@ export default function MaterialsDetailsPage() {
 
       <div className="bg-gray-800 p-4 rounded-lg shadow-md">
         <h3 className="text-2xl font-semibold text-blue-300 border-b-2 border-blue-500 pb-2 mb-2">
-          Category
-        </h3>
-        <p className="text-gray-300">{details.data.category}</p>
-      </div>
-
-      <div className="bg-gray-800 p-4 rounded-lg shadow-md">
-        <h3 className="text-2xl font-semibold text-blue-300 border-b-2 border-blue-500 pb-2 mb-2">
           Common Locations
         </h3>
         <div className="flex flex-wrap gap-2">{renderedLocations}</div>
@@ -48,7 +46,9 @@ export default function MaterialsDetailsPage() {
           Cooking Effect
         </h3>
         <div className="p-3 bg-gray-700 rounded flex justify-start flex-wrap gap-2 text-gray-300">
-          {details.data.cooking_effect}
+          {details.data.cooking_effect
+            ? capitalizeFirstLetter(details.data.cooking_effect)
+            : "None"}
         </div>
       </div>
 

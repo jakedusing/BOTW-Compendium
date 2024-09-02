@@ -31,13 +31,6 @@ export default function EquipmentDetailsPage() {
 
       <div className="bg-gray-800 p-4 rounded-lg shadow-md">
         <h3 className="text-2xl font-semibold text-blue-300 border-b-2 border-blue-500 pb-2 mb-2">
-          Category
-        </h3>
-        <p className="text-gray-300">{details.data.category}</p>
-      </div>
-
-      <div className="bg-gray-800 p-4 rounded-lg shadow-md">
-        <h3 className="text-2xl font-semibold text-blue-300 border-b-2 border-blue-500 pb-2 mb-2">
           Common Locations
         </h3>
         <div className="flex flex-wrap gap-2">{renderedLocations}</div>
