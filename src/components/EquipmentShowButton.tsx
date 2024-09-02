@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
-//import { CategoryMaterialSummary } from "../api/types/materials/categoryMaterialSummary";
-//import { CategorySummary } from "../api/types/categorySummary";
 
 interface CategoryShowProps {
   name: string;
   onClick: () => void;
 }
 
-export default function MaterialShowButton({
+export default function EquipmentShowButton({
   name,
   onClick,
 }: CategoryShowProps) {
@@ -17,7 +15,7 @@ export default function MaterialShowButton({
       onClick={onClick}
       className="py-2 px-3 rounded bg-black text-white text-lg"
     >
-      View Materials
+      View Equipment
     </Link>
   );
 }

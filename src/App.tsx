@@ -7,6 +7,8 @@ import DetailsPage from "./pages/details/DetailsPage";
 import { detailsLoader } from "./pages/details/detailsLoader";
 import MaterialsDetailsPage from "./pages/details/materials/MatertialsDetailsPage";
 import { materialsDetailsLoader } from "./pages/details/materials/materialsDetailsLoader";
+import EquipmentDetailsPage from "./pages/details/equipment/EquipmentDetailsPage";
+import { equipmentDetailsLoader } from "./pages/details/equipment/equipmentDetailsLoader";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,11 @@ const router = createBrowserRouter([
         path: "/materials/:name",
         element: <MaterialsDetailsPage />,
         loader: materialsDetailsLoader,
+      },
+      {
+        path: "/equipment/:name",
+        element: <EquipmentDetailsPage />,
+        loader: equipmentDetailsLoader,
       },
     ],
   },

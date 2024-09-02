@@ -1,19 +1,19 @@
-import type { CategorySummary } from "../types/categorySummary";
+//  import { CategoryMaterialSummary } from "../../types/materials/categoryMaterialSummary";
+import { CategoryEquipmentSummary } from "../../types/equipment/categoryEquipmentSummary";
 
 interface SearchResponse {
   data: [
     data: {
       name?: string;
-      category?: string;
       description?: string;
       common_locations?: string[];
     }
   ];
 }
 
-export async function searchCategories(
+export async function searchEquipmentCategories(
   term: string
-): Promise<CategorySummary[]> {
+): Promise<CategoryEquipmentSummary[]> {
   const res = await fetch(
     `https://botw-compendium.herokuapp.com/api/v3/compendium/category/${term}`
   );
@@ -22,7 +22,6 @@ export async function searchCategories(
   return data.data.map((data) => {
     return {
       name: data?.name ?? "Unknown",
-      category: data?.category ?? "n/a",
       description: data?.description ?? "No description available",
       common_locations: data?.common_locations ?? [],
     };

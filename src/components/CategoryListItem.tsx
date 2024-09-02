@@ -22,8 +22,10 @@ export default function CategoryListItem({ category }: CategoryListItemProps) {
   let pathName = "";
   if (category.category === "monsters") {
     pathName = `/categories/${category.name}`;
-  } else {
+  } else if (category.category === "materials") {
     pathName = `/materials/${category.name}`;
+  } else {
+    pathName = `/equipment/${category.name}`;
   }
 
   return (

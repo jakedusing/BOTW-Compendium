@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 
 interface CategoryShowProps {
   name: string;
+  onClick: () => void;
 }
 
-export default function CategoryShowButton({ name }: CategoryShowProps) {
+export default function CategoryShowButton({
+  name,
+  onClick,
+}: CategoryShowProps) {
   /* const [term, setTerm] = useState("");
   const navigate = useNavigate();
 
@@ -19,6 +23,7 @@ export default function CategoryShowButton({ name }: CategoryShowProps) {
   return (
     <Link
       to={`/search?term=${name}`}
+      onClick={onClick}
       className="py-2 px-3 rounded bg-black text-white text-lg mr-4"
     >
       View Monsters
