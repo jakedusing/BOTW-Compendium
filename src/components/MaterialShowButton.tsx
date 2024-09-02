@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-//import { CategoryMaterialSummary } from "../api/types/materials/categoryMaterialSummary";
-//import { CategorySummary } from "../api/types/categorySummary";
 
 interface CategoryShowProps {
   name: string;
@@ -15,7 +13,7 @@ export default function MaterialShowButton({
     <Link
       to={`/search?term=${name}`}
       onClick={onClick}
-      className="py-2 px-3 rounded bg-black text-white text-lg"
+      className="inline-block py-2 px-4 rounded-lg bg-gray-800 text-gray-100 text-lg font-medium border border-gray-600 hover:bg-gray-700 hover:border-gray-500 transition-colors duration-300"
     >
       View Materials
     </Link>
